@@ -13,7 +13,7 @@ driver.get("https://www.instagram.com/")
 
 username = "username"
 password = "123456789"
-
+link=""
 user = driver.find_element(By.XPATH,"""//*[@id="loginForm"]/div[1]/div[1]/div/label/input""")
 user.send_keys(f"{username}")
 
@@ -23,5 +23,8 @@ passw.send_keys(f"{password}")
 
 log = driver.find_element(By.XPATH,"""//*[@id="loginForm"]/div[1]/div[3]/button""")
 log.click()
+
+
+
 
 time.sleep(10)
