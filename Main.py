@@ -3,7 +3,14 @@ from selenium.webdriver.chrome.service import Service as chromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time 
-from Config import username,password
+
+
+
+username= "your_username"
+password= "your_password"
+
+
+
 
 try:
     Service = chromeService(ChromeDriverManager().install())
@@ -28,23 +35,7 @@ try:
         save.click()
         time.sleep(5)
     except:
-        print(f"Error occurred: سیو!")
-
-    try:
-        
-        driver.get("https://www.instagram.com/50cent/?g=5")
-        time.sleep(5)
-        post = driver.find_element(By.XPATH,"""//*[@id="mount_0_0_Lo"]/div/div/div[2]/div/div/div[1]/div[2]/div/div[1]/section/main/div/div[2]/div/div/div/div[1]/div[1]/a/div[2]""")
-        post.click()
-        time.sleep(2)
-        like = driver.find_element(By.XPATH,"""/html/body/div[5]/div[1]/div/div[3]/div/div/div/div/div[2]/div/article/div/div[2]/div/div/div[2]/section[1]/span[1]/div/div/div""")
-        like.click()
-        time.sleep(2)
-        back = driver.find_element(By.XPATH,"""/html/body/div[6]/div[1]/div/div[2]/div/div/svg""")
-        back.click()
-    except:
-        print ( "مشکل لایک!") 
-
+        print(f"Error occurred:Error!")
 
 except Exception as e:
     print(f"Error occurred: مشکل حساب!")
